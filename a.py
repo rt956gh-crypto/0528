@@ -1,3 +1,4 @@
+from google.genai import types
 from google import genai
 
 # 1. 帶入金鑰建立 Client 物件
