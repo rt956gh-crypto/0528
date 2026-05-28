@@ -1,0 +1,7 @@
+flask
+
+firebase_admin
+
+bs4
+
+google-genai
