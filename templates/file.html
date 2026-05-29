@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>車牌辨識</title>
+
+
+    <script>
+    function previewImage(event) {
+        var reader = new FileReader();
+        var output = document.getElementById('output');
+        
+        output.src = URL.createObjectURL(event.target.files[0]);
+        output.style.display = 'block'; // 顯示圖片
+    }
+    </script>
+
+</head>
+
+<body>
+    <h2>車牌辨識系統</h2>
+    
+    <form action="/upload" method="post" enctype="multipart/form-data">
+        <input type="file" name="file" accept="image/*" onchange="previewImage(event)">
+        <br><br>
+        
+        <img id="output" style="max-width: 400px; display: none;"><br><br>
+        
+        <button type="submit">開始辨識</button>
+    </form>
+
+</body>
+</html>
